@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Navigate</title>
+    <style>
+        .suggestions {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            z-index: 1000;
+            width: calc(100% - 22px);
+        }
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" style="width: 100%; padding: 10px; margin: 10px 0;">
+    <div id="suggestions" class="suggestions"></div>
+
+    <script>
+        const pages = [
+            { name: 'Home', url: 'home.html' },
+            { name: 'About', url: 'about.html' },
+            { name: 'Contact', url: 'contact.html' },
+            { name: 'Services', url: 'services.html' },
+            { name: 'Blog', url: 'blog.html' }
+        ];
+
+        function showSuggestions() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const suggestions = document.getElementById('suggestions');
+            suggestions.innerHTML = '';
+            if (input) {
+                const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                filteredPages.forEach(page => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.className = 'suggestion-item';
+                    suggestionItem.textContent = page.name;
+                    suggestionItem.onclick = () => {
+                        window.location.href = page.url;
+                    };
+                    suggestions.appendChild(suggestionItem);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Codetek</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Header with logo and company name -->
+    <header class="header">
+        <div class="d-flex justify-content-between">
+            <img src="logo.png" alt="Codetek Logo" class="logo mx-4 ">
+            <h1 class="company-name"> <b>CSS Tours & Travellers</b></h1>
+
+           
+                <div class="search-box p-4" >
+                    <div class="input-group">
+                        <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+        </div>
+    </div>
+        
+    
+        <div id="suggestions" class="suggestions"></div>
+    
+        <script>
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'About', url: 'about.html' },
+                { name: 'munnar', url: 'munnar.html' },
+                { name: 'shimla', url: 'shimla.html' },
+                { name: 'srinagar', url: 'srinagar.html' },
+                { name: 'delhi', url: 'delhi.html' },
+                { name: 'packages', url: 'packages.html' }
+    
+            ];
+    
+            function showSuggestions() {
+                const input = document.getElementById('search').value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = '';
+                if (input) {
+                    const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                    filteredPages.forEach(page => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = page.name;
+                        suggestionItem.onclick = () => {
+                            window.location.href = page.url;
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+            </form>
+        </div>
+    </header>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <div class="d-flex justify-content-center py-2">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item h4" ><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdownPolicies" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>Packages</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPolicies">
+                            <a class="dropdown-item" href="nights.html">₹5999-[2N/3D]</a>
+                            <a class="dropdown-item" href="nights4.html">₹8999-[4N/5D]</a>
+                            <a class="dropdown-item" href="nights7.html">₹12999-[7N/8D]</a>
+                            <a class="dropdown-item" href="nights9.html">₹14999-[9N/10D]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <b>Locations</b> 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPlans">
+                            <a class="dropdown-item" href="shimla.html">Shimla</a>
+                            <a class="dropdown-item" href="munnar.html">Munnar</a>
+                            <a class="dropdown-item" href="srinagar.html">Srinagar</a>
+                            <a class="dropdown-item" href="delhi.html">Delhi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item h4" ><a class="nav-link" href="login.html"><b>My account</b></a></li>
+                    <li class="nav-item h4" ><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Munnar 2N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in munnar</strong> <br>
+                        <b>Morning:</b>
+
+                        Check-in: Arrive and check into your hotel or resort.<br>
+Relax: Spend the evening relaxing and enjoying the mountainous surroundings.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2: Munnar Town Exploration</strong> <br>
+                    <b>Morning:</b>
+
+                    Kufri Excursion: Head to Kufri, about 16 km from Shimla, known for its scenic beauty and adventure activities. You can visit the Kufri Fun World or enjoy horse riding and panoramic views from Mahasu Peak.
+                    Green Valley: : On your way back, stop at Green Valley, a picturesque spot offering lush greenery and serene views, perfect for photography.<br>
+                    
+                    <b>Afternoon:</b><br>
+                    <b>Tea Museum:</b> Visit the Tea Museum to learn about the history and process of tea-making in Munnar.<br>
+<b>Mattupetty Dam:</b> Explore Mattupetty Dam and take a boat ride on the reservoir, surrounded by hills and tea gardens.<br>
+<b>Echo Point:</b> Visit Echo Point where you can shout and hear your voice echo amidst the hills<br>
+                <br>
+                <b>dinner:</b>Choose a cozy spot for your dinner.
+                </li><br>
+
+                <li><strong>Day 3: Departure</strong><br>
+                <b>Morning:</b>Relax and Pack: Enjoy a leisurely breakfast and take in the views one last time before packing.
+                Depart from Shimla: Check out from your hotel and head to your next destination.
+                </li>
+                                </ul>
+</div>
+                
+<div class="col-md-4">
+    <img src="munnar creative image (1).jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar waterfalls.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Munnar 4N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in munnar</strong> <br>
+                        <b>Morning:</b>
+
+                        Check-in: Arrive and check into your hotel or resort.<br>
+Relax: Spend the evening relaxing and enjoying the mountainous surroundings.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2: Munnar Town Exploration</strong> <br>
+                    <b>Morning:</b>
+
+                    Kufri Excursion: Head to Kufri, about 16 km from Shimla, known for its scenic beauty and adventure activities. You can visit the Kufri Fun World or enjoy horse riding and panoramic views from Mahasu Peak.
+                    Green Valley: : On your way back, stop at Green Valley, a picturesque spot offering lush greenery and serene views, perfect for photography.<br>
+                    
+                    <b>Afternoon:</b><br>
+                    <b>Tea Museum:</b> Visit the Tea Museum to learn about the history and process of tea-making in Munnar.<br>
+<b>Mattupetty Dam:</b> Explore Mattupetty Dam and take a boat ride on the reservoir, surrounded by hills and tea gardens.<br>
+<b>Echo Point:</b> Visit Echo Point where you can shout and hear your voice echo amidst the hills<br>
+                <br>
+                <b>dinner:</b>Choose a cozy spot for your dinner.
+                </li><br>
+
+                <li><strong>Day 3: Tea Plantations and Eravikulam National Park</strong><br>
+                <b>Tea Plantation Tour: </b>Take a guided tour through the lush tea gardens of Munnar. Many estates offer tours where you can see tea processing.<br>
+               <b>Eravikulam National Park:</b>  Explore the park known for its endangered Nilgiri Tahr (mountain goat). Enjoy the scenic beauty and possibly spot wildlife.    </li><br>
+                <li><strong>Day 4: Top Station and Kundala Lake</strong><br>
+                    <b>Top Station:</b> Visit Top Station, the highest point in Munnar offering panoramic views of the Western Ghats and Tamil Nadu plains.<br>
+                    <b>Kundala Lake: </b>Enjoy a boat ride on Kundala Lake and visit the nearby Kundala Dam.   </li><br>
+                    <li><strong>Day 5: Departure</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from Munnar    </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="munnar pic2.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar allepey.webp" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar stay.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+        </div>
+
+        
+    </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Munnar 7N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in munnar</strong> <br>
+                        <b>Morning:</b>
+
+                        Check-in: Arrive and check into your hotel or resort.<br>
+Relax: Spend the evening relaxing and enjoying the mountainous surroundings.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2: Munnar Town Exploration</strong> <br>
+                    <b>Morning:</b>
+
+                    Kufri Excursion: Head to Kufri, about 16 km from Shimla, known for its scenic beauty and adventure activities. You can visit the Kufri Fun World or enjoy horse riding and panoramic views from Mahasu Peak.
+                    Green Valley: : On your way back, stop at Green Valley, a picturesque spot offering lush greenery and serene views, perfect for photography.<br>
+                    
+                    <b>Afternoon:</b><br>
+                    <b>Tea Museum:</b> Visit the Tea Museum to learn about the history and process of tea-making in Munnar.<br>
+<b>Mattupetty Dam:</b> Explore Mattupetty Dam and take a boat ride on the reservoir, surrounded by hills and tea gardens.<br>
+<b>Echo Point:</b> Visit Echo Point where you can shout and hear your voice echo amidst the hills<br>
+                <br>
+                <b>dinner:</b>Choose a cozy spot for your dinner.
+                </li><br>
+
+                <li><strong>Day 3: Tea Plantations and Eravikulam National Park</strong><br>
+                <b>Tea Plantation Tour: </b>Take a guided tour through the lush tea gardens of Munnar. Many estates offer tours where you can see tea processing.<br>
+               <b>Eravikulam National Park:</b>  Explore the park known for its endangered Nilgiri Tahr (mountain goat). Enjoy the scenic beauty and possibly spot wildlife.    </li><br>
+                <li><strong>Day 4: Top Station and Kundala Lake</strong><br>
+                    <b>Top Station:</b> Visit Top Station, the highest point in Munnar offering panoramic views of the Western Ghats and Tamil Nadu plains.<br>
+                    <b>Kundala Lake: </b>Enjoy a boat ride on Kundala Lake and visit the nearby Kundala Dam.   </li><br>
+                    <li><strong>Day 5: Chinnar Wildlife Sanctuary</strong><br>
+                        <b>Chinnar Wildlife Sanctuary:</b> Take a day trip to Chinnar Wildlife Sanctuary. It's known for its rich biodiversity and offers opportunities for wildlife spotting and trekking.    </li><br>
+                        <li><strong>Day 6:  Devikulam and Lockhart Gap</strong><br>
+                            <b></b>Devikulam: Visit Devikulam, a small hill station known for its scenic beauty, tea plantations, and the Sita Devi Lake.
+                            Lockhart Gap: Enjoy the view from Lockhart Gap, a scenic viewpoint offering panoramic views of the surrounding valleys and tea estates.    </li><br>
+                            <li><strong>Day 7: Marayoor and Dolmens</strong><br>
+                                <b></b>Marayoor: Explore Marayoor, known for its sandalwood forests, sugarcane fields, and ancient dolmens (prehistoric burial chambers).
+                                Thoovanam Waterfalls: Visit Thoovanam Waterfalls in Chinnar Wildlife Sanctuary, if not visited earlier.    </li>
+                    <li><strong>Day 8: Departure</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from Munnar   </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="munnar waterfalls.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar creative image.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar6.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+<br>
+<img src="munnar allepey.webp" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+
+</div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Munnar 9N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in munnar</strong> <br>
+                        <b>Morning:</b>
+
+                        Check-in: Arrive and check into your hotel or resort.<br>
+Relax: Spend the evening relaxing and enjoying the mountainous surroundings.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2: Munnar Town Exploration</strong> <br>
+                    <b>Morning:</b>
+
+                    Kufri Excursion: Head to Kufri, about 16 km from Shimla, known for its scenic beauty and adventure activities. You can visit the Kufri Fun World or enjoy horse riding and panoramic views from Mahasu Peak.
+                    Green Valley: : On your way back, stop at Green Valley, a picturesque spot offering lush greenery and serene views, perfect for photography.<br>
+                    
+                    <b>Afternoon:</b><br>
+                    <b>Tea Museum:</b> Visit the Tea Museum to learn about the history and process of tea-making in Munnar.<br>
+<b>Mattupetty Dam:</b> Explore Mattupetty Dam and take a boat ride on the reservoir, surrounded by hills and tea gardens.<br>
+<b>Echo Point:</b> Visit Echo Point where you can shout and hear your voice echo amidst the hills<br>
+                <br>
+                <b>dinner:</b>Choose a cozy spot for your dinner.
+                </li><br>
+
+                <li><strong>Day 3: Tea Plantations and Eravikulam National Park</strong><br>
+                <b>Tea Plantation Tour: </b>Take a guided tour through the lush tea gardens of Munnar. Many estates offer tours where you can see tea processing.<br>
+               <b>Eravikulam National Park:</b>  Explore the park known for its endangered Nilgiri Tahr (mountain goat). Enjoy the scenic beauty and possibly spot wildlife.    </li><br>
+                <li><strong>Day 4: Top Station and Kundala Lake</strong><br>
+                    <b>Top Station:</b> Visit Top Station, the highest point in Munnar offering panoramic views of the Western Ghats and Tamil Nadu plains.<br>
+                    <b>Kundala Lake: </b>Enjoy a boat ride on Kundala Lake and visit the nearby Kundala Dam.   </li><br>
+                    <li><strong>Day 5: Chinnar Wildlife Sanctuary</strong><br>
+                        <b>Chinnar Wildlife Sanctuary:</b> Take a day trip to Chinnar Wildlife Sanctuary. It's known for its rich biodiversity and offers opportunities for wildlife spotting and trekking.    </li><br>
+                        <li><strong>Day 6:  Devikulam and Lockhart Gap</strong><br>
+                            <b></b>Devikulam: Visit Devikulam, a small hill station known for its scenic beauty, tea plantations, and the Sita Devi Lake.
+                            Lockhart Gap: Enjoy the view from Lockhart Gap, a scenic viewpoint offering panoramic views of the surrounding valleys and tea estates.    </li><br>
+                            <li><strong>Day 7: Marayoor and Dolmens</strong><br>
+                                <b></b>Marayoor: Explore Marayoor, known for its sandalwood forests, sugarcane fields, and ancient dolmens (prehistoric burial chambers).
+                                Thoovanam Waterfalls: Visit Thoovanam Waterfalls in Chinnar Wildlife Sanctuary, if not visited earlier.    </li>
+                                <li><strong>Day 8: Leisure and Relaxation</strong>
+                                    Free Day: Use this day to relax at your resort, explore local markets, or indulge in Ayurvedic treatments and spa therapies.  </li>
+ <li><strong>Day 9:  Departure from Munnar</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from munnar   </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="munnar7.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar8.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="munnar creative image (1).jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+<br>
+<img src="munnar nelakunji.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+
+</div>
+    </div>
+    </div>
+    
+    <footer class="footer  text-white py-4">
+        <div>
+            <div class="row justify-content-between mx-2">
+                <!-- Quick Links Section -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="packages.html" class="text-white">Packages</a></li>
+                        <li><a href="locations.html" class="text-white">Locations</a></li>
+                    </ul>
+                </div>
+                <!-- Categories Section -->
+                <div class="col-md-2">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="gold.html" class="text-white">Gold</a></li>
+                        <li><a href="premium.html" class="text-white">Premium</a></li>
+                        <li><a href="diamond.html" class="text-white">Diamond</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-2">
+                    <h5>Terms & Conditions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Refund.html" class="text-white">Refund Policy</a></li>
+                        <li><a href="Cancellation.html" class="text-white">Cancellation Policy</a></li>
+                        <li><a href="Baggage Policy.html" class="text-white">Baggage Policy</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><span class="text-white">Email: </span><a href="mailto:info@codetek.com" class="text-white">info@codetek.com</a></li>
+                        <!-- <li>
+                            <span class="text-white"><i class="fas fa-map-marker-alt"></i> Location: </span>
+                            <span class="text-white">1234 Street, City, Country</span>
+                        </li>                         -->
+                        <li>
+                            <a href = "https://maps.app.goo.gl/6YcwFwdND8ZkEhpg8" target=”_blank” class="fas fa-map-marker-alt">Location: Codetek software solution</a>              
+                        </li>
+                        <li><span class="text-white">Phone: </span><span class="text-white">+123 456 7890</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Social Media & Copyright -->
+    <div class= " footer-2 ">
+        <div class="row">
+            <div class="col">
+                <div class=" text-white text-center py-2">
+                    
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="mb-0">© 2024 Codetek. All rights reserved.</p>
+                            </div>
+                        </div>
+                    
+               
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

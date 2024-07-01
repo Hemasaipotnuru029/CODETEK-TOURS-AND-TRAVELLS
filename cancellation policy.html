@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codetek</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+	<title>Log In / Sign Up | ICOM DIGITAL</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="login style.css">  
+</head>
+<body>
+    <header class="header">
+        <div class="d-flex justify-content-between">
+            <img src="logo.png" alt="Codetek Logo" class="logo mx-4 ">
+            <h1 class="company-name"> <b>CSS Tours & Travellers</b></h1>
+
+           
+                <div class="search-box p-4" >
+                    <div class="input-group">
+                        <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+        </div>
+    </div>
+        
+    
+        <div id="suggestions" class="suggestions"></div>
+    
+        <script>
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'About', url: 'about.html' },
+                { name: 'munnar', url: 'munnar.html' },
+                { name: 'shimla', url: 'shimla.html' },
+                { name: 'srinagar', url: 'srinagar.html' },
+                { name: 'delhi', url: 'delhi.html' },
+                { name: 'packages', url: 'packages.html' }
+    
+            ];
+    
+            function showSuggestions() {
+                const input = document.getElementById('search').value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = '';
+                if (input) {
+                    const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                    filteredPages.forEach(page => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = page.name;
+                        suggestionItem.onclick = () => {
+                            window.location.href = page.url;
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+            </form>
+        </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <div class="d-flex justify-content-center py-2">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item h4" ><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdownPolicies" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>Packages</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPolicies">
+                            <a class="dropdown-item" href="nights.html">₹5999-[2N/3D]</a>
+                            <a class="dropdown-item" href="nights4.html">₹8999-[4N/5D]</a>
+                            <a class="dropdown-item" href="nights7.html">₹12999-[7N/8D]</a>
+                            <a class="dropdown-item" href="nights9.html">₹14999-[9N/10D]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <b>Locations</b> 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPlans">
+                            <a class="dropdown-item" href="shimla.html">Shimla</a>
+                            <a class="dropdown-item" href="munnar.html">Munnar</a>
+                            <a class="dropdown-item" href="srinagar.html">Srinagar</a>
+                            <a class="dropdown-item" href="delhi.html">Delhi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item h4" ><a class="nav-link" href="login.html"><b>My account</b></a></li>
+                    <li class="nav-item h4" ><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h3 class="text-center">Cancellation policy</h3>
+      <!-- Additional Text Section -->
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Health Insurance</h2>
+                <p>Health insurance is a type of coverage that pays for medical, surgical, prescription drugs, and sometimes dental expenses incurred by the insured. It can provide a financial safety net against high medical costs and encourage access to timely medical care.</p>
+                
+                <h3>Types of Health Insurance</h3>
+                <ul>
+                    <li><strong>Individual Health Insurance:</strong> Plans purchased by individuals for themselves and their families.</li>
+                    <li><strong>Group Health Insurance:</strong> Typically offered by employers to employees, covering a large group under a single policy.</li>
+                    <li><strong>Government Health Insurance:</strong> Includes programs like Medicare, Medicaid, and state health plans for low-income families.</li>
+                    <li><strong>Short-term Health Insurance:</strong> Temporary coverage for a limited period, often used between jobs or during other transitional periods.</li>
+                </ul>
+
+                <h3>Coverage Options</h3>
+                <p>Health insurance policies can vary widely in terms of what they cover. Common categories include:</p>
+                <ul>
+                    <li>Preventive Care: Services like vaccinations, screenings, and check-ups.</li>
+                    <li>Emergency Services: Coverage for ER visits and urgent care.</li>
+                    <li>Hospitalization: Inpatient care, including surgeries and overnight stays.</li>
+                    <li>Prescription Drugs: Medications prescribed by a healthcare provider.</li>
+                    <li>Maternity and Newborn Care: Prenatal, delivery, and postnatal care.</li>
+                    <li>Mental Health Services: Therapy, counseling, and psychiatric care.</li>
+                </ul>
+
+                <h3>Choosing a Plan</h3>
+                <p>When selecting a health insurance plan, consider the following factors:</p>
+                <ul>
+                    <li><strong>Premiums:</strong> The amount you pay each month for coverage.</li>
+                    <li><strong>Deductibles:</strong> The amount you pay out-of-pocket before insurance starts covering expenses.</li>
+                    <li><strong>Copayments and Coinsurance:</strong> Your share of costs for services after meeting the deductible.</li>
+                    <li><strong>Network:</strong> The group of doctors, hospitals, and providers that your insurance plan contracts with.</li>
+                    <li><strong>Coverage Limits:</strong> Maximum amounts the insurance will pay for certain services or within a year.</li>
+                    <li><strong>Additional Benefits:</strong> Wellness programs, telehealth services, or dental and vision coverage.</li>
+                </ul>
+
+                <h3>How to Use Your Health Insurance</h3>
+                <ul>
+                    <li><strong>Finding In-Network Providers:</strong> Check your insurance provider’s directory to choose doctors and hospitals that accept your insurance.</li>
+                    <li><strong>Understanding Your Benefits:</strong> Review your policy to understand what is covered and any limits or exclusions.</li>
+                    <li><strong>Filing Claims:</strong> Learn the process for submitting claims for reimbursement of medical expenses.</li>
+                    <li><strong>Preventive Services:</strong> Utilize covered preventive services to maintain your health and catch potential issues early.</li>
+                </ul>
+            </div>
+            <div class="col-md-4 ">
+                <img src="cancellation-policy-imag2.png" alt="Health Insurance" class="img-fluid rounded" alt="rounded corners image"> <br>
+
+                <br>
+                <img src="cancellation-policy-imag1.webp" alt="Health Insurance" class="img-fluid rounded-circle" alt="Custom circular image"> <br>
+                <br>
+
+                <img src="cancellation policy imag 3.jpg" alt="Health Insurance" class="img-fluid rounded" alt="Custom circular image"> <br>
+                <br>
+                
+                <img src="cancellation policy imag 4.jpg" alt="Health Insurance" class="img-fluid rounded-circle" alt="Custom circular image"> 
+                
+                <br>
+
+
+            </div>
+            
+        </div>
+
+    </div>
+        <!-- Footer -->
+    <footer class="footer  text-white py-4">
+        <div>
+            <div class="row justify-content-between mx-2">
+                <!-- Quick Links Section -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="packages.html" class="text-white">Packages</a></li>
+                        <li><a href="locations.html" class="text-white">Locations</a></li>
+                    </ul>
+                </div>
+                <!-- Categories Section -->
+                <div class="col-md-2">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="gold.html" class="text-white">Gold</a></li>
+                        <li><a href="premium.html" class="text-white">Premium</a></li>
+                        <li><a href="diamond.html" class="text-white">Diamond</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-2">
+                    <h5>Terms & Conditions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Refund Policy.html" class="text-white">Refund Policy</a></li>
+                        <li><a href="cancellation policy.html" class="text-white">Cancellation Policy</a></li>
+                        <li><a href="Baggage Policy.html" class="text-white">Baggage Policy</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><span class="text-white">Email: </span><a href="mailto:info@codetek.com" class="text-white">info@codetek.com</a></li>
+                        <!-- <li>
+                            <span class="text-white"><i class="fas fa-map-marker-alt"></i> Location: </span>
+                            <span class="text-white">1234 Street, City, Country</span>
+                        </li>                         -->
+                        <li>
+                            <a href = "https://maps.app.goo.gl/6YcwFwdND8ZkEhpg8" target=”_blank” class="fas fa-map-marker-alt">Location: Codetek software solution</a>              
+                        </li>
+                        <li><span class="text-white">Phone: </span><span class="text-white">+123 456 7890</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>  
+      <div class= " footer-2 ">
+        <div class="row">
+            <div class="col">
+                <div class=" text-white text-center py-2">
+                    
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="mb-0">© 2024 Codetek. All rights reserved.</p>
+                            </div>
+                        </div>
+                    
+               </div>
+              
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

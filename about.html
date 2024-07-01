@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codetek</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="d-flex justify-content-between">
+            <img src="logo.png" alt="Codetek Logo" class="logo mx-4 ">
+            <h1 class="company-name"> <b>CSS Tours & Travellers</b></h1>
+
+           
+                <div class="search-box p-4" >
+                    <div class="input-group">
+                        <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+        </div>
+    </div>
+        
+    
+        <div id="suggestions" class="suggestions"></div>
+    
+        <script>
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'About', url: 'about.html' },
+                { name: 'munnar', url: 'munnar.html' },
+                { name: 'shimla', url: 'shimla.html' },
+                { name: 'srinagar', url: 'srinagar.html' },
+                { name: 'delhi', url: 'delhi.html' },
+                { name: 'packages', url: 'packages.html' }
+    
+            ];
+    
+            function showSuggestions() {
+                const input = document.getElementById('search').value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = '';
+                if (input) {
+                    const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                    filteredPages.forEach(page => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = page.name;
+                        suggestionItem.onclick = () => {
+                            window.location.href = page.url;
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+            </form>
+        </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <div class="d-flex justify-content-center py-2">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item h4" ><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdownPolicies" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>Packages</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPolicies">
+                            <a class="dropdown-item" href="nights.html">₹5999-[2N/3D]</a>
+                            <a class="dropdown-item" href="nights4.html">₹8999-[4N/5D]</a>
+                            <a class="dropdown-item" href="nights7.html">₹12999-[7N/8D]</a>
+                            <a class="dropdown-item" href="nights9.html">₹14999-[9N/10D]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <b>Locations</b> 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPlans">
+                            <a class="dropdown-item" href="shimla.html">Shimla</a>
+                            <a class="dropdown-item" href="munnar.html">Munnar</a>
+                            <a class="dropdown-item" href="srinagar.html">Srinagar</a>
+                            <a class="dropdown-item" href="delhi.html">Delhi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item h4" ><a class="nav-link" href="login.html"><b>My account</b></a></li>
+                    <li class="nav-item h4" ><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="float-left">
+    <img src="about.jpg" alt="about" height="500" width="1217">
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="about">
+                <br>
+                <br>
+                <div class="container mt-5 mx-4">
+                <h2 style="color: rgb(20, 74, 174);"><b>About Us: </b></h2>
+                <div class="d-flex mb-4">
+<p class="mr-4"> Welcome to CSS tours and travels embark on unforgettable journey with us <BR>"Founded by Ram, CSS Tours and Travels is dedicated to creating memorable travel experiences. We specialize in crafting unique journeys that cater to every traveler's wanderlust, ensuring each adventure is seamless and unforgettable."</p> <br>
+</div>
+    
+                   
+                    <h3 style="color: rgb(174, 30, 20);"><b>Our Mission:</b></h3>
+                    
+                            <p><br> With <b>Ram's visionary leadership</b>, we're dedicated to crafting journeys that transcend the ordinary, making every trip an unforgettable adventure.
+                            <br><b>We believe travel is not just about visiting places</b>; it's about immersing yourself in new cultures, forging connections, and creating lifelong memories. We are committed to curating exceptional journeys that cater to diverse interests and preferences, ensuring each trip is meticulously planned and seamlessly executed.
+                         Driven by a passion for excellence, our team of travel experts is dedicated to delivering personalized service and unforgettable experiences. Whether you're seeking a thrilling adventure, a relaxing escape, or a cultural odyssey, we are here to make your travel dreams a reality.
+                          Join us at CSS Tours and Travels and embark on a journey where every destination tells a unique story, and every moment is filled with discovery and delight. Let us inspire you to explore the world with curiosity, authenticity, and unparalleled hospitality.</p><br>
+                        
+                        <h3 style="color: rgb(174, 20, 20);"></h3style><b>Our Vision :</b></h3>
+                        <p>Welcome to the heart of <b>CSS Tours and Travels</b>, where our mission is to redefine the art of travel.
+                            <br> Founded by Ram, we are driven by a passion for crafting journeys that transcend the ordinary, offering you experiences that inspire, enlighten, and transform.<br> At CSS Tours and Travels, we believe in curating moments that enrich your soul and expand your horizons. Whether you're craving an adrenaline-packed adventure, a serene retreat, or a cultural immersion, our commitment to excellence ensures every detail is meticulously planned for your utmost satisfaction.
+                             <Br>Join us on a voyage of discovery where each destination becomes a chapter in your personal travel story.
+                                <br> With CSS Tours and Travels, your journey is not just a trip—it's an unforgettable experience that leaves a unforgettable memory throughout your life.
+                        </p>
+                      <h3 style="color: rgb(98, 14, 101);"></h3style><b> Founder's Message</b></h3>
+
+Newton started with an apple and made history, we started during one of our vacations. We figured out that more than enjoying vacation we spent time and energy in making arrangements; the story was worst during our business tours. After detailed research and study, we found out some inadequacies in current system. We took up task to develop a technique so as to help people wow their holidays and have comfortable businesstours. The result is Wowidays, a venture with a vision.”
+We aim to combine the platform of service providers with complimenting values and bring in cost effective and viable travel and touring solutions. We have a broad spectrum of services includes Corporate Travel, Leisure Travel, Travel Insurance, Business Travel, Chartered Flights & Helicopter Services, Visa Assistance, Foreign Exchange and many more. To bring out the best for our associates, we have tied with many International /National operators and suppliers within a short span of time and the saga continues.
+
+<h3 style="color: rgb(88, 4, 87);"></h3style><b>Founder</b></h3>
+<b> Ram</b>
+A self motivated individual with a background in Market Research, Marketing & Sales, Entrepreneurial Start-up Businesses and Project Management.
+<br> Mr. Ram as always been well ahead of the family Holiday and Travel industry using the intellectual skills as an inexpensive, yet dynamic communication and marketing tool.
+<br> His career has been highlighted by creation of innovative concepts and programs for family Holiday and Travel industry.
+<br> He has revamped and enhanced the current and new operations with a foresighted approach that will help them last long.
+
+
+<h3 style="color: rgba(73, 6, 61, 0.844);"></h3style><b>Hands on industry expertise</b></h3>
+<li>Core professional team across verticals.</li>
+<li>Complimenting brand composition for true value driven services.</li>
+<li>Presence across the entire gamut of travel lifestyle service sector</li>
+<li>Handpicked young vibrant associate network well recognized in its own field</li>
+<li>Responsive and open market ready to explore things in new sectors</li>
+<li>Built comprehensive service base and a one stop destination for all needs</li>
+<li>Create cross brand promotions and reap for individual brands</li>
+<li>Built offline with online growth</li>
+
+                        </ul>
+                        </div>
+                        </div>
+                    </div>
+                        </div>
+                       
+                        <footer class="footer  text-white py-4">
+                            <div>
+                                <div class="row justify-content-between mx-2">
+                                    <!-- Quick Links Section -->
+                                    <div class="col-md-2">
+                                        <h5>Quick Links</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="index.html" class="text-white">Home</a></li>
+                                            <li><a href="packages.html" class="text-white">Packages</a></li>
+                                            <li><a href="locations.html" class="text-white">Locations</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Categories Section -->
+                                    <div class="col-md-2">
+                                        <h5>Categories</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="gold.html" class="text-white">Gold</a></li>
+                                            <li><a href="premium.html" class="text-white">Premium</a></li>
+                                            <li><a href="diamond.html" class="text-white">Diamond</a></li>
+                                        </ul>
+                                    </div>
+                    
+                    
+                                    <div class="col-md-2">
+                                        <h5>Terms & Conditions</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a href="Refund.html" class="text-white">Refund Policy</a></li>
+                                            <li><a href="Cancellation.html" class="text-white">Cancellation Policy</a></li>
+                                            <li><a href="Baggage Policy.html" class="text-white">Baggage Policy</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                
+                                    <!-- Contact Section -->
+                                    <div class="col-md-4">
+                                        <h5>Contact Us</h5>
+                                        <ul class="list-unstyled">
+                                            <li><span class="text-white">Email: </span><a href="mailto:info@codetek.com" class="text-white">info@codetek.com</a></li>
+                                            <!-- <li>
+                                                <span class="text-white"><i class="fas fa-map-marker-alt"></i> Location: </span>
+                                                <span class="text-white">1234 Street, City, Country</span>
+                                            </li>                         -->
+                                            <li>
+                                                <a href = "https://maps.app.goo.gl/6YcwFwdND8ZkEhpg8" target=”_blank” class="fas fa-map-marker-alt">Location: Codetek software solution</a>              
+                                            </li>
+                                            <li><span class="text-white">Phone: </span><span class="text-white">+123 456 7890</span></li>
+                                        </ul>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    
+                        <!-- Additional Text Section -->
+                        <div class= " footer-2 ">
+                            <div class="row">
+                                <div class="col">
+                                    <div class=" text-white text-center py-2">
+                                        
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                                        <i class="fab fa-instagram"></i> Instagram
+                                                    </a>
+                                                    <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="mb-0">© 2024 Codetek. All rights reserved.</p>
+                                                </div>
+                                            </div>
+                                        
+                                   
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                       
+                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+                    </body>
+                    </html>

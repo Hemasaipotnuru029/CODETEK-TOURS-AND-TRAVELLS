@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Codetek</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Header with logo and company name -->
+    <header class="header">
+        <div class="d-flex justify-content-between">
+            <img src="logo.png" alt="Codetek Logo" class="logo mx-4 ">
+            <h1 class="company-name"> <b>CSS Tours & Travellers</b></h1>
+
+           
+                <div class="search-box p-4" >
+                    <div class="input-group">
+                        <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+        </div>
+    </div>
+        
+    
+        <div id="suggestions" class="suggestions"></div>
+    
+        <script>
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'About', url: 'about.html' },
+                { name: 'munnar', url: 'munnar.html' },
+                { name: 'shimla', url: 'shimla.html' },
+                { name: 'srinagar', url: 'srinagar.html' },
+                { name: 'delhi', url: 'delhi.html' },
+                { name: 'packages', url: 'packages.html' }
+    
+            ];
+    
+            function showSuggestions() {
+                const input = document.getElementById('search').value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = '';
+                if (input) {
+                    const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                    filteredPages.forEach(page => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = page.name;
+                        suggestionItem.onclick = () => {
+                            window.location.href = page.url;
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+            </form>
+        </div>
+    </header>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <div class="d-flex justify-content-center py-2">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item h4" ><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdownPolicies" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>Packages</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPolicies">
+                            <a class="dropdown-item" href="nights.html">₹5999-[2N/3D]</a>
+                            <a class="dropdown-item" href="nights4.html">₹8999-[4N/5D]</a>
+                            <a class="dropdown-item" href="nights7.html">₹12999-[7N/8D]</a>
+                            <a class="dropdown-item" href="nights9.html">₹14999-[9N/10D]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <b>Locations</b> 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPlans">
+                            <a class="dropdown-item" href="shimla.html">Shimla</a>
+                            <a class="dropdown-item" href="munnar.html">Munnar</a>
+                            <a class="dropdown-item" href="srinagar.html">Srinagar</a>
+                            <a class="dropdown-item" href="delhi.html">Delhi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item h4" ><a class="nav-link" href="login.html"><b>My account</b></a></li>
+                    <li class="nav-item h4" ><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Agra 2N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in agra</strong> <br>
+                        <b>Morning:</b>
+                        Check-in: Arrive in Agra and check into your hotel.
+                        Relax: Spend the evening relaxing and preparing for the days ahead.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2:Taj Mahal and Agra Fort</strong> <br>
+                    <b>Morning:</b>
+
+                    Taj Mahal: Visit the Taj Mahal at sunrise to admire its beauty in the soft morning light.
+Breakfast: Enjoy breakfast at a nearby restaurant.
+Agra Fort: Explore Agra Fort, a UNESCO World Heritage site known for its impressive architecture and history.
+                </li><br>              
+                  <li><strong>Day 3: Departure</strong><br>
+                    <b></b>Morning relax and pack bags.
+                    Check out and depart from agra and go with good memeories.    </li>
+                                </ul>
+</div>
+                
+<div class="col-md-4">
+    <img src="agrapic1 (1).jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="agrapic2.webp" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Agra 4N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in agra</strong> <br>
+                        <b>Morning:</b>
+                        Check-in: Arrive in Agra and check into your hotel.
+                        Relax: Spend the evening relaxing and preparing for the days ahead.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2:Taj Mahal and Agra Fort</strong> <br>
+                    <b>Morning:</b>
+
+                    Taj Mahal: Visit the Taj Mahal at sunrise to admire its beauty in the soft morning light.
+Breakfast: Enjoy breakfast at a nearby restaurant.
+Agra Fort: Explore Agra Fort, a UNESCO World Heritage site known for its impressive architecture and history.
+                </li><br>
+
+                <li><strong>Day 3: Itmad-ud-Daulah and Mehtab Bagh</strong><br>
+                    Itmad-ud-Daulah (Baby Taj): Visit the Itmad-ud-Daulah, often referred to as the "Baby Taj" for its intricate marble inlay work.
+Mehtab Bagh: Visit Mehtab Bagh in the evening for a panoramic view of the Taj Mahal across the Yamuna River.<br>
+                <li><strong>Day 4: Fatehpur Sikri Day Trip</strong><br>
+                    Fatehpur Sikri: Take a day trip to Fatehpur Sikri, a deserted Mughal city and UNESCO World Heritage site. Explore the Buland Darwaza, Jama Masjid, and other historical buildings<br>
+                    <li><strong>Day 5: Departure</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from agra    </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="agraloc3.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="agraloc4.jpeg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+        </div>
+
+        
+    </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Agra 7N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in agra</strong> <br>
+                        <b>Morning:</b>
+                        Check-in: Arrive in Agra and check into your hotel.
+                        Relax: Spend the evening relaxing and preparing for the days ahead.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2:Taj Mahal and Agra Fort</strong> <br>
+                    <b>Morning:</b>
+
+                    Taj Mahal: Visit the Taj Mahal at sunrise to admire its beauty in the soft morning light.
+Breakfast: Enjoy breakfast at a nearby restaurant.
+Agra Fort: Explore Agra Fort, a UNESCO World Heritage site known for its impressive architecture and history.
+                </li><br>
+
+                <li><strong>Day 3: Itmad-ud-Daulah and Mehtab Bagh</strong><br>
+                    Itmad-ud-Daulah (Baby Taj): Visit the Itmad-ud-Daulah, often referred to as the "Baby Taj" for its intricate marble inlay work.
+Mehtab Bagh: Visit Mehtab Bagh in the evening for a panoramic view of the Taj Mahal across the Yamuna River.<br>
+                <li><strong>Day 4: Fatehpur Sikri Day Trip</strong><br>
+                    Fatehpur Sikri: Take a day trip to Fatehpur Sikri, a deserted Mughal city and UNESCO World Heritage site. Explore the Buland Darwaza, Jama Masjid, and other historical buildings<br>
+                    <li><strong>Day 5: Sikandra and Local Markets</strong><br>
+                        Sikandra: Visit Sikandra, the tomb of Akbar the Great, known for its blend of Hindu, Christian, Islamic, Buddhist, and Jain motifs.
+Shopping: Explore local markets in Agra for handicrafts, marble souvenirs, and local cuisine.<br>
+                        <li><strong>Day 6:  Agra Heritage Walk and Cultural Exploration</strong><br>
+                            Heritage Walk: Take a guided heritage walk through the old city of Agra, exploring lesser-known historical sites and local culture.
+Cultural Show: Attend a cultural show in the evening to experience traditional music and dance performances.<br>
+                            <li><strong>Day 7: Day at Leisure</strong><br>
+                                Free Day: Use this day to relax, unwind, and revisit favorite spots or explore any missed attractions.<br>
+                    <li><strong>Day 8: Departure</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from agra   </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="delhi temple.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="delhi.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="agra12.png" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Agra 9N Sighitseeing</h2>
+                <br>
+                
+                <ul>
+                    <li><strong>Day 1: Arrival in agra</strong> <br>
+                        <b>Morning:</b>
+                        Check-in: Arrive in Agra and check into your hotel.
+                        Relax: Spend the evening relaxing and preparing for the days ahead.<br>
+                        
+                        <b>Dinner:</b></b> Enjoy dinner at one of the restaurants on  international dishes</li>
+                    <br>
+                   <li><strong>Day 2:Taj Mahal and Agra Fort</strong> <br>
+                    <b>Morning:</b>
+
+                    Taj Mahal: Visit the Taj Mahal at sunrise to admire its beauty in the soft morning light.
+Breakfast: Enjoy breakfast at a nearby restaurant.
+Agra Fort: Explore Agra Fort, a UNESCO World Heritage site known for its impressive architecture and history.
+                </li><br>
+
+                <li><strong>Day 3: Itmad-ud-Daulah and Mehtab Bagh</strong><br>
+                    Itmad-ud-Daulah (Baby Taj): Visit the Itmad-ud-Daulah, often referred to as the "Baby Taj" for its intricate marble inlay work.
+Mehtab Bagh: Visit Mehtab Bagh in the evening for a panoramic view of the Taj Mahal across the Yamuna River.<br>
+                <li><strong>Day 4: Fatehpur Sikri Day Trip</strong><br>
+                    Fatehpur Sikri: Take a day trip to Fatehpur Sikri, a deserted Mughal city and UNESCO World Heritage site. Explore the Buland Darwaza, Jama Masjid, and other historical buildings<br>
+                    <li><strong>Day 5: Sikandra and Local Markets</strong><br>
+                        Sikandra: Visit Sikandra, the tomb of Akbar the Great, known for its blend of Hindu, Christian, Islamic, Buddhist, and Jain motifs.
+Shopping: Explore local markets in Agra for handicrafts, marble souvenirs, and local cuisine.<br>
+                        <li><strong>Day 6:  Agra Heritage Walk and Cultural Exploration</strong><br>
+                            Heritage Walk: Take a guided heritage walk through the old city of Agra, exploring lesser-known historical sites and local culture.
+Cultural Show: Attend a cultural show in the evening to experience traditional music and dance performances.<br>
+                            <li><strong>Day 7: Day at Leisure</strong><br>
+                                Free Day: Use this day to relax, unwind, and revisit favorite spots or explore any missed attractions.<br>
+                                <li><strong>Day 8: Local Experiences and Cuisines</strong>
+                                    Cooking Class: Take a cooking class to learn about Mughlai cuisine and prepare traditional dishes.
+Local Experiences: Explore more of Agra's local life, perhaps visiting a local village or participating in community activities.<br>
+ <li><strong>Day 9:  Departure from Agra</strong><br>
+                        <b></b>Morning relax and pack.
+                        Check out and depart from Agra   </li>
+                                </ul>
+</div>
+
+                
+<div class="col-md-4">
+    <img src="agraloc3.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="agra4.png" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+    <br>
+    <img src="agra14.jpg" alt="Health Insurance"  width="500" height="200" class="img-fluid"><br>
+        </div>
+    </div>
+    </div>
+    
+    <footer class="footer  text-white py-4">
+        <div>
+            <div class="row justify-content-between mx-2">
+                <!-- Quick Links Section -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="packages.html" class="text-white">Packages</a></li>
+                        <li><a href="locations.html" class="text-white">Locations</a></li>
+                    </ul>
+                </div>
+                <!-- Categories Section -->
+                <div class="col-md-2">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="gold.html" class="text-white">Gold</a></li>
+                        <li><a href="premium.html" class="text-white">Premium</a></li>
+                        <li><a href="diamond.html" class="text-white">Diamond</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-2">
+                    <h5>Terms & Conditions</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Refund.html" class="text-white">Refund Policy</a></li>
+                        <li><a href="Cancellation.html" class="text-white">Cancellation Policy</a></li>
+                        <li><a href="Baggage Policy.html" class="text-white">Baggage Policy</a></li>
+                        
+                    </ul>
+                </div>
+            
+                <!-- Contact Section -->
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><span class="text-white">Email: </span><a href="mailto:info@codetek.com" class="text-white">info@codetek.com</a></li>
+                        <!-- <li>
+                            <span class="text-white"><i class="fas fa-map-marker-alt"></i> Location: </span>
+                            <span class="text-white">1234 Street, City, Country</span>
+                        </li>                         -->
+                        <li>
+                            <a href = "https://maps.app.goo.gl/6YcwFwdND8ZkEhpg8" target=”_blank” class="fas fa-map-marker-alt">Location: Codetek software solution</a>              
+                        </li>
+                        <li><span class="text-white">Phone: </span><span class="text-white">+123 456 7890</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Social Media & Copyright -->
+    <div class= " footer-2 ">
+        <div class="row">
+            <div class="col">
+                <div class=" text-white text-center py-2">
+                    
+                        <div class="row">
+                            <div class="col">
+                                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="mb-0">© 2024 Codetek. All rights reserved.</p>
+                            </div>
+                        </div>
+                    
+               
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

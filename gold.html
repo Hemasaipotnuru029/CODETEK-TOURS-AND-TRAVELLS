@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codetek</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+	<title>Log In / Sign Up | ICOM DIGITAL</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="login style.css">  
+</head>
+<body>
+    <header class="header">
+        <div class="d-flex justify-content-between">
+            <img src="logo.png" alt="Codetek Logo" class="logo mx-4 ">
+            <h1 class="company-name"> <b>CSS Tours & Travellers</b></h1>
+
+           
+                <div class="search-box p-4" >
+                    <div class="input-group">
+                        <input type="text" id="search" placeholder="Type to search..." oninput="showSuggestions()" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+        </div>
+    </div>
+        
+    
+        <div id="suggestions" class="suggestions"></div>
+    
+        <script>
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'About', url: 'about.html' },
+                { name: 'munnar', url: 'munnar.html' },
+                { name: 'shimla', url: 'shimla.html' },
+                { name: 'srinagar', url: 'srinagar.html' },
+                { name: 'delhi', url: 'delhi.html' },
+                { name: 'packages', url: 'packages.html' }
+    
+            ];
+    
+            function showSuggestions() {
+                const input = document.getElementById('search').value.toLowerCase();
+                const suggestions = document.getElementById('suggestions');
+                suggestions.innerHTML = '';
+                if (input) {
+                    const filteredPages = pages.filter(page => page.name.toLowerCase().includes(input));
+                    filteredPages.forEach(page => {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = page.name;
+                        suggestionItem.onclick = () => {
+                            window.location.href = page.url;
+                        };
+                        suggestions.appendChild(suggestionItem);
+                    });
+                }
+            }
+        </script>
+            </form>
+        </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <div class="d-flex justify-content-center py-2">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item h4" ><a class="nav-link" href="index.html"><b>Home</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdownPolicies" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b>Packages</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPolicies">
+                            <a class="dropdown-item" href="nights.html">₹5999-[2N/3D]</a>
+                            <a class="dropdown-item" href="nights4.html">₹8999-[4N/5D]</a>
+                            <a class="dropdown-item" href="nights7.html">₹12999-[7N/8D]</a>
+                            <a class="dropdown-item" href="nights9.html">₹14999-[9N/10D]</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <b>Locations</b> 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPlans">
+                            <a class="dropdown-item" href="shimla.html">Shimla</a>
+                            <a class="dropdown-item" href="munnar.html">Munnar</a>
+                            <a class="dropdown-item" href="srinagar.html">Srinagar</a>
+                            <a class="dropdown-item" href="delhi.html">Delhi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item h4" ><a class="nav-link" href="login.html"><b>My account</b></a></li>
+                    <li class="nav-item h4" ><a class="nav-link" href="about.html"><b>About</b></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h1 class="mb-4 text-center">Gold Categories</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h3>1. Introduction</h3>
+                <p>Our Gold Categories offer an elevated travel experience with exclusive services and amenities designed for discerning travelers. Discover the benefits and features of our premium offerings below.</p>
+
+                <h3>2. Accommodation</h3>
+                <p>Gold Category accommodations include:</p>
+                <ul>
+                    <li>Luxurious 5-star hotels and resorts</li>
+                    <li>Private villas and exclusive suites</li>
+                    <li>Personalized room service and concierge</li>
+                </ul>
+
+                <h3>3. Dining</h3>
+                <p>Enjoy gourmet dining experiences, including:</p>
+                <ul>
+                    <li>Access to exclusive restaurants and dining venues</li>
+                    <li>Chef-prepared meals with customized menus</li>
+                    <li>In-room dining options available 24/7</li>
+                </ul>
+
+                <h3>4. Transportation</h3>
+                <p>Travel in style and comfort with:</p>
+                <ul>
+                    <li>Private airport transfers in luxury vehicles</li>
+                    <li>First-class or business-class flights</li>
+                    <li>Private chauffeurs and tour guides</li>
+                </ul>
+
+                <h3>5. Activities and Excursions</h3>
+                <p>Exclusive activities and excursions include:</p>
+                <ul>
+                    <li>Private tours and experiences</li>
+                    <li>Access to VIP events and attractions</li>
+                    <li>Customized itineraries based on your interests</li>
+                </ul>
+
+                <h3>6. Wellness and Relaxation</h3>
+                <p>Relax and rejuvenate with:</p>
+                <ul>
+                    <li>Access to world-class spas and wellness centers</li>
+                    <li>Personalized fitness programs and trainers</li>
+                    <li>Exclusive wellness retreats and workshops</li>
+                </ul>
+
+                <h3>7. Special Services</h3>
+                <p>Additional special services include:</p>
+                <ul>
+                    <li>Personalized travel planning and support</li>
+                    <li>Exclusive access to events and experiences</li>
+                    <li>Priority check-in and boarding</li>
+                </ul>
+
+                <h3>8. Membership Benefits</h3>
+                <p>Our Gold Category members enjoy:</p>
+                <ul>
+                    <li>Priority booking and reservations</li>
+                    <li>Exclusive discounts and offers</li>
+                    <li>Dedicated customer support</li>
+                </ul>
+
+                <h3>9. Contact Information</h3>
+                <p>For more information about our Gold Categories or to book a premium experience, please contact us at:</p>
+                <ul>
+                    <li><strong>Email</strong>: <a href="mailto:csstourismcompany@gmail.com">yourcompany@example.com</a></li>
+                    <li><strong>Phone</strong>:50052 50052</li>
+                    <li><strong>Address</strong>:  4-25/1 B.K.guda Hyderabad Telangana 500078, Hyberabad, India</li>
+                </ul>
+
+                <h3>10. Policy Amendments</h3>
+                <p>We reserve the right to amend our Gold Categories at any time. Any changes will be posted on our website, and it is your responsibility to review the offerings periodically.</p>
+
+                <h3>11. Governing Law</h3>
+                <p>These Gold Categories are governed by the laws of Your Country/State, and any disputes arising from them will be subject to the exclusive jurisdiction of the courts of Your Country/State.</p>
+            </div>
+
+            <div class="col-md-4 center-image"><br><br><br><br><br><br>
+                <img src="gold 1.jpeg" alt="Gold Category" class="img-fluid rounded mb-3" >
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+         <!-- Footer -->
+         <footer class="footer  text-white py-4">
+            <div>
+                <div class="row justify-content-between mx-2">
+                    <!-- Quick Links Section -->
+                    <div class="col-md-2">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white">Home</a></li>
+                            <li><a href="packages.html" class="text-white">Packages</a></li>
+                            <li><a href="locations.html" class="text-white">Locations</a></li>
+                        </ul>
+                    </div>
+                    <!-- Categories Section -->
+                    <div class="col-md-2">
+                        <h5>Categories</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="gold.html" class="text-white">Gold</a></li>
+                            <li><a href="premium.html" class="text-white">Premium</a></li>
+                            <li><a href="diamond.html" class="text-white">Diamond</a></li>
+                        </ul>
+                    </div>
+    
+    
+                    <div class="col-md-2">
+                        <h5>Terms & Conditions</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Refund Policy.html" class="text-white">Refund Policy</a></li>
+                            <li><a href="cancellation policy.html" class="text-white">Cancellation Policy</a></li>
+                            <li><a href="Baggage Policy.html" class="text-white">Baggage Policy</a></li>
+                
+                        </ul>
+                    </div>
+                
+                    <!-- Contact Section -->
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li><span class="text-white">Email: </span><a href="mailto:info@codetek.com" class="text-white">info@codetek.com</a></li>
+                            <!-- <li>
+                                <span class="text-white"><i class="fas fa-map-marker-alt"></i> Location: </span>
+                                <span class="text-white">1234 Street, City, Country</span>
+                            </li>                         -->
+                            <li>
+                                <a href = "https://maps.app.goo.gl/6YcwFwdND8ZkEhpg8" target=”_blank” class="fas fa-map-marker-alt">Location: Codetek software solution</a>              
+                            </li>
+                            <!-- <li><span class="text-white">Location: </span><span class="text-white">1234 Street, City, Country</span></li> -->
+                            <li><span class="text-white">Phone: </span><span class="text-white">+123 456 7890</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>  
+          <div class= " footer-2 ">
+            <div class="row">
+                <div class="col">
+                    <div class=" text-white text-center py-2">
+                        
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+                                        <i class="fab fa-instagram"></i> Instagram
+                                    </a>
+                                    <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
+                                        <i class="fab fa-linkedin"></i> LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="mb-0">© 2024 Codetek. All rights reserved.</p>
+                                </div>
+                            </div>
+                        
+                   
+                  
+                </div>
+            </div>
+        </div>
+    
+       
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
